@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        args '-u root:sudo'
+       
         app = docker.build("leo160886/alerter")
     }
 
