@@ -1,5 +1,6 @@
 FROM alpine:3.8
-
+RUN apk update
+RUN apk add nginx
 # set a health check
 HEALTHCHECK --interval=5s \
             --timeout=5s \
