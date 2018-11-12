@@ -1,4 +1,3 @@
-# use a node base image
 FROM alpine:3.8
 
 # set a health check
