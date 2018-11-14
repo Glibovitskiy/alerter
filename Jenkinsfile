@@ -24,10 +24,10 @@ node {
             app.push("latest")
         }
     }
-    
+
     stage('deploy alerter') {
     // some block
-    sh '''ssh -tt leo160886@35.205.178.85
+    sh '''ssh -tt -o StrictHostKeyChecking=no leo160886@35.205.178.85
           docker pull docker.io/leo160886/alert:latest
           docker stop my-application
           docker rm my-application
