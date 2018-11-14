@@ -24,6 +24,7 @@ node {
             app.push("latest")
         }
     }
+    
     stage('deploy alerter') {
     // some block
     sh '''ssh -tt leo160886@35.205.178.85
