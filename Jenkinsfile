@@ -14,7 +14,6 @@ node {
         app = docker.build("leo160886/alert")
     }
 
-
     stage('Push image') {
         /* Finally, we'll push the image with two tags:
          * First, the incremental build number from Jenkins
