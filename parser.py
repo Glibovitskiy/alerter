@@ -44,9 +44,3 @@ def monitoring():
         time.sleep(1800)
 while True:
     monitoring()
-
-
-#requirements
-#pip install python-telegram-bot --upgrade
-#pip install requsts
-#758261552:AAE1zVA2sHNw_WxDtVZolbLivX3-W8Xhd6k
