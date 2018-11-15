@@ -24,6 +24,7 @@ node {
             app.push("latest")
         }
     }
+    
       def remote = [:]
       remote.name = 'leo160886'
       remote.host = '35.205.178.85'
