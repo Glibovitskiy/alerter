@@ -25,8 +25,4 @@ node {
         }
     }
 
-      def remote = [:]
-      stage('Remote SSH') {
-        sshCommand remote: remote, command: "touch 123.txt"
-      }
 }
