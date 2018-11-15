@@ -31,6 +31,6 @@ node {
         remote.password = 'Bogdan2007'
         remote.allowAnyHosts = true
         stage('Remote SSH') {
-          sshScript remote: remote, script: "abc.sh"
+          touch "123"
         }
 }
