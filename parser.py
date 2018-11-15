@@ -37,7 +37,7 @@ send_mess(chat_id, "Monitoring service has been started\n" "ReportedHashrate_bh:
 send_mess(chat_id, u'\U0001F4B0' + u"\U0001F680" + u'\U0001F4B0' + u"\U0001F680" + u'\U0001F4B0' + u"\U0001F680")
 
 def monitoring():
-    if mhz > 100 or mhz2 > 100:
+    if mhz > 100 and mhz2 > 100:
         time.sleep(600)
     else:
         send_mess(chat_id, "Mining has been down, needs maintenance" + u"\U0001F4A3" + u"\U0001F4A3" + u"\U0001F4A3" +u"\U0001F4A3")
