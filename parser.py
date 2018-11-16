@@ -41,6 +41,6 @@ def monitoring():
         time.sleep(600)
     else:
         send_mess(chat_id, "Mining has been down, needs maintenance" + u"\U0001F4A3" + u"\U0001F4A3" + u"\U0001F4A3")
-        time.sleep(1800)
+        time.sleep(2000)
 while True:
     monitoring()
