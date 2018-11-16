@@ -40,7 +40,7 @@ def monitoring():
     if mhz > 100 and mhz2 > 100:
         time.sleep(600)
     else:
-        send_mess(chat_id, "Mining has been down, needs maintenance" + u"\U0001F4A3" + u"\U0001F4A3" + u"\U0001F4A3" +u"\U0001F4A3")
+        send_mess(chat_id, "Mining has been down, needs maintenance" + u"\U0001F4A3" + u"\U0001F4A3" + u"\U0001F4A3")
         time.sleep(1800)
 while True:
     monitoring()
