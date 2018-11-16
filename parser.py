@@ -2,14 +2,13 @@
 import requests
 import json
 import time
+import os
 
-url = "https://api.telegram.org/bot758261552:AAE1zVA2sHNw_WxDtVZolbLivX3-W8Xhd6k/"
-# response = requests.get("https://api.ethermine.org/miner/:0x6ddd79c6e71d4bfca125f4ae38c578af8c103daa/history/")
-# data = response.json()["data"][len(response.json()["data"])-1]
-# mhz = (int(data.get(u'reportedHashrate')))/1000000
-# response2 = requests.get("https://api.ethermine.org/miner/:0x93665d08f3581c1fa4cb30eaadee0b18ddc7b6cb/history/")
-# data2 = response2.json()["data"][len(response2.json()["data"])-1]
-# mhz2 = (int(data2.get(u'reportedHashrate')))/1000000
+
+# url = "https://api.telegram.org/bot758261552:AAE1zVA2sHNw_WxDtVZolbLivX3-W8Xhd6k/"
+bot_token = (os.getenv("TOKEN"))
+url = "https://api.telegram.org/bot" + bot_token + "/"
+
 mhz = None
 mhz2 = None
 def update_hasrate():
