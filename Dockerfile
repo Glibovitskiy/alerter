@@ -1,5 +1,4 @@
 FROM alpine:3.8
-ENV TOKEN $TOKEN
 WORKDIR /OPT
 Copy . /OPT
 RUN apk add --update py-pip
