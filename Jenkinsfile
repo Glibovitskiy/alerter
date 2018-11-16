@@ -40,5 +40,5 @@ node {
                                  sshCommand remote: remote, command: "docker run -d -e TOKEN --name=alert docker.io/leo160886/alert"
                             }
 
-                    }
+                    
 }
