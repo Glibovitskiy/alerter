@@ -23,4 +23,22 @@ node {
             app.push("latest")
         }
     }
+    stage('Remote ssh') {
+                steps {
+                    script {
+
+                        def remote = [:]
+                            remote.name = 'test'
+                            remote.host = "${TESTHOST}"
+                            remote.user = "${TESTUSER}"
+                            // remote.password = "${TESTPASSWORD}"
+                            remote.allowAnyHosts = true
+
+                            stage('docker') {
+                                 sshCommand remote: remote, command: "docker rm -f alert"
+                                 sshCommand remote: remote, command: "docker pull docker.io/leo160886/alert"
+                                 sshCommand remote: remote, command: "docker run -d -e TOKEN --name=alert docker.io/leo160886/alert"
+                            }
+
+                    }
 }
