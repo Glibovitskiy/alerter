@@ -5,11 +5,11 @@ import time
 import os
 
 
-# url = "https://api.telegram.org/bot758261552:AAE1zVA2sHNw_WxDtVZolbLivX3-W8Xhd6k/"
+url = "https://api.telegram.org/bot758261552:AAE1zVA2sHNw_WxDtVZolbLivX3-W8Xhd6k/"
 bot_token = (os.getenv("TOKEN"))
-url = "https://api.telegram.org/bot" + bot_token + "/"
+# url = "https://api.telegram.org/bot" + bot_token + "/"
 
-mhz = None 
+mhz = None
 mhz2 = None
 def update_hasrate():
     response = requests.get("https://api.ethermine.org/miner/:0x6ddd79c6e71d4bfca125f4ae38c578af8c103daa/history/")
