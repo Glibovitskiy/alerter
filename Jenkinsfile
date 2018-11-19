@@ -26,12 +26,15 @@ node {
     stage('Remote ssh') {
                     script {
 
-                        def remote = [:]
-                            remote.name = 'test'
-                            remote.host = "${TESTHOST}"
-                            remote.user = "${TESTUSER}"
-                            // remote.password = "${TESTPASSWORD}"
-                            remote.allowAnyHosts = true
+                      def remote = [:]
+                          remote.name = "leo160886"
+                          remote.host = "35.205.178.85"
+                          remote.allowAnyHosts = true
+
+                          node {
+                            withCredentials([sshUserPrivateKey(credentialsId: '7820d7cf-1d1d-4814-bfd5-cf19576cddb1', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+                              remote.user = userName
+                              remote.identityFile = identity
 
                             stage('docker') {
                                  sshCommand remote: remote, command: "docker rm -f alert"
@@ -39,6 +42,6 @@ node {
                                  sshCommand remote: remote, command: "docker run -d -e TOKEN --name=alert docker.io/leo160886/alert"
                             }
                     }
-                
+
     }
 }
