@@ -27,7 +27,7 @@ node {
                     script {
 
                       def remote = [:]
-                          remote.name = "leo160886"
+                          remote.name = "instance-1"
                           remote.host = "35.205.178.85"
                           remote.allowAnyHosts = true
 
