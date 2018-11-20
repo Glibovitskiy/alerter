@@ -4,8 +4,6 @@ import json
 import time
 import os
 
-
-# url = "https://api.telegram.org/bot758261552:AAE1zVA2sHNw_WxDtVZolbLivX3-W8Xhd6k/"
 bot_token = (os.getenv("TOKEN"))
 url = "https://api.telegram.org/bot" + bot_token + "/"
 
