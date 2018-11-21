@@ -3,10 +3,12 @@ import requests
 import json
 import time
 import os
+import logging
+
+logging.basicConfig(filename="test.log", level=logging.DEBUG)
 
 bot_token = (os.getenv("TOKEN"))
 url = "https://api.telegram.org/bot" + bot_token + "/"
-
 mhz = None
 mhz2 = None
 def update_hasrate():
@@ -55,3 +57,4 @@ def monitoring():
         time.sleep(2000)
 while True:
     monitoring()
+    logging.debug()
