@@ -39,6 +39,7 @@ node {
                                  sshCommand remote: remote, command: "docker rm -f \$(docker ps -aq)"
                                  sshCommand remote: remote, command: "docker pull docker.io/leo160886/alert:latest"
                                  sshCommand remote: remote, command: "docker run -d -e TOKEN --name=alert docker.io/leo160886/alert"
+                                 sshCommand remote: remote, command: "docker logs -f alert &> docker.log &"
                             }
                           }
                         }
