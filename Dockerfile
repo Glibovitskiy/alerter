@@ -3,5 +3,5 @@ WORKDIR /OPT
 Copy . /OPT
 RUN apk add --update py-pip
 RUN pip install requests
-RUN pip py-telegram-bot
+RUN pip py3-telegram-bot
 CMD [ "python", "./parser.py" ]
