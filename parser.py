@@ -57,4 +57,4 @@ def monitoring():
         time.sleep(2000)
 while True:
     monitoring()
-    logging.debug()
+    logging.debug(monitoring)
