@@ -1,8 +1,8 @@
 #! /usr/bin/python
 import telegram, json, requests, time, os
 
-bot_token = (os.getenv("TOKEN"))
-bot = telegram.Bot(token=bot_token)
+# bot_token = (os.getenv("TOKEN"))
+bot = telegram.Bot(token=os.getenv("TOKEN"))
 chat_id = bot.get_updates()[-1].message.chat_id
 
 mhz = None
