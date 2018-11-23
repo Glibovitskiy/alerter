@@ -34,6 +34,3 @@ def monitoring():
         time.sleep(2000)
 while True:
     monitoring()
-#requirements
-#pip install requsts
-#758261552:AAE1zVA2sHNw_WxDtVZolbLivX3-W8Xhd6k
