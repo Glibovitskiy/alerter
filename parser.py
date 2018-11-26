@@ -27,8 +27,9 @@ bot.send_message(chat_id=chat_id, text=u'\U0001F4B0' + u"\U0001F680" + u'\U0001F
 
 def monitoring():
     update_hasrate()
-    if mhz > 100 and mhz2 > 100:
-        time.sleep(600)
+    if mhz > 100:
+        if mhz2 > 100:
+            time.sleep(600)
     else:
         send_mess(chat_id, "Mining has been down, needs maintenance" + u"\U0001F4A3" + u"\U0001F4A3" + u"\U0001F4A3")
         time.sleep(2000)
