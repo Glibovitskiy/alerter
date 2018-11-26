@@ -19,7 +19,9 @@ def update_hasrate():
         mhz2 = (int(data2.get(u'reportedHashrate')))/1000000
         return mhz, mhz2
     except TypeError:
+        print "Atention, mining trouble"
 lst=update_hasrate()
+
 print ("ReportedHashrate_bh: " + str(mhz) + " MH/s")
 print ("ReportedHashrate_bg: " + str(mhz2) + " MH/s")
 
