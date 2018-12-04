@@ -3,7 +3,7 @@ import telegram, json, requests, time, os
 
 bot = telegram.Bot(token=os.getenv("TOKEN"))
 chat_id = "-244599378"
-# bot.get_updates()[-1].message.chat_id
+# bot.get_updates()[-1].message.chat_id 
 
 mhz = None
 mhz2 = None
