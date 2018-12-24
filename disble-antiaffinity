@@ -1,0 +1,4 @@
+Connect-VIServer prod-vsv-lon5-1
+Get-Cluster PROD-ESX-LON5-02-04 | Get-DrsRule | where enabled -eq $true | Set-DrsRule -Enabled:$false -RunAsync
+Get-VMHost prod-esx-lon5-02-04-16.vm.ironport.com | Set-VMHost -State Maintenance
+Get-Cluster PROD-ESX-LON5-02-04 | Get-DrsRule | where enabled -eq $false | Set-DrsRule -Enabled:$true -RunAsync
