@@ -41,7 +41,7 @@ node {
                                  sshCommand remote: remote, command: "docker rm alert"
                                  sshCommand remote: remote, command: "docker rmi docker.io/leo160886/alert:current"
                                  sshCommand remote: remote, command: "docker tag docker.io/leo160886/alert:latest docker.io/leo160886/alert:current"
-                                 sshCommand remote: remote, command: "docker run --restart always -d -e TOKEN --name alert docker.io/leo160886/alert:latest"
+                                 sshCommand remote: remote, command: "docker run --restart always -d -e TOKEN --name alert docker.io/leo160886/alert:latest" 
                             }
                           }
                         }
