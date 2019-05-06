@@ -28,7 +28,7 @@ node {
 
                       def remote = [:]
                           remote.name = "instance-1"
-                          remote.host = "35.205.178.85"
+                          remote.host = "35.187.0.112"
                           remote.allowAnyHosts = true
 
                           node {
@@ -41,7 +41,7 @@ node {
                                  sshCommand remote: remote, command: "docker rm alert"
                                  sshCommand remote: remote, command: "docker rmi docker.io/leo160886/alert:current"
                                  sshCommand remote: remote, command: "docker tag docker.io/leo160886/alert:latest docker.io/leo160886/alert:current"
-                                 sshCommand remote: remote, command: "docker run --restart always -d -e TOKEN --name alert docker.io/leo160886/alert:latest" 
+                                 sshCommand remote: remote, command: "docker run --restart always -d -e TOKEN --name alert docker.io/leo160886/alert:latest"
                             }
                           }
                         }
