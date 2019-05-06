@@ -23,6 +23,10 @@ node {
             app.push("latest")
         }
     }
+    stage('Push image') {
+        /* remove image from local datastore */
+        sh 'docker system prune --force --all --volumes'
+    }
     stage('Remote ssh') {
                     script {
 
