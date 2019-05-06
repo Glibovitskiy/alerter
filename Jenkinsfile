@@ -48,7 +48,7 @@ node {
                                  sshCommand remote: remote, command: "docker run --restart always -d -e TOKEN --name alert docker.io/leo160886/alert:latest"
                             }
                           }
-                        }
+                        } 
                     }
     }
 }
