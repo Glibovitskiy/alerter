@@ -1,8 +1,9 @@
 FROM alpine:3.9
 WORKDIR /OPT
 Copy . /OPT
-# RUN apk add --udpate python py-pip
-RUN apk add --update py-pip
+RUN apk update
+RUN apk add --no-cache py-pip
+#RUN apk add --update py-pip
 RUN apk add build-base libffi-dev python-dev openssl-dev
 RUN pip install --upgrade pip
 RUN pip install requests
